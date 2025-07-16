@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahesh Panidem Portfolio</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
+  <style>
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #ffffff;
+      background: url("https://e0.pxfuel.com/wallpapers/358/714/desktop-wallpaper-stefan-iordache-your-desired-developer-to-make-your-perfect-responsive-website-web-programming.jpg") no-repeat fixed center/cover;
+    }
+    .w3-sidebar {
+      width: 120px;
+      background: transparent;
+    }
+    #main {
+      margin-left: 120px;
+    }
+    @media only screen and (max-width: 600px) {
+      #main {margin-left: 0;}
+    }
+    h1, h2, h3 {
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+    .section-title {
+      font-size: 28px;
+      margin: 40px 0 20px;
+      border-bottom: 2px solid #ffffff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .skills-bar {
+      height: 28px;
+      background-color: #ffffff;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .skills-bar div {
+      height: 100%;
+      background-color: #9c59ee;
+      text-align: right;
+      padding-right: 8px;
+      line-height: 28px;
+      color: #ffffff;
+    }
+    .w3-button {
+      border-radius: 30px;
+      background-color:#9c59ee;
+      color: #ffffff;
+      transition: 0.3s;
+    }
+    .w3-button:hover {
+      background-color: #ffffff;
+      color: #000000;
+    }
+    a img {
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      display: block;
+    }
+    a img:hover {
+      transform: scale(1.05);
+    }
+    .project-image {
+      text-align: left;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <a href="#home" class="w3-bar-item w3-button w3-padding-large ">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a><br>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large ">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a><br>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large ">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Top menu for small screens -->
+<div class="w3-top w3-hide-large w3-hide-medium">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#home" class="w3-bar-item w3-button" style="width:33%">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:33%">ABOUT</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:33%">CONTACT</a>
+  </div>
+</div>
+
+<!-- Main content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header -->
+  <header class="w3-container w3-padding-32 w3-center" id="home">
+    <h1 class="w3-jumbo">I'm Mahesh Panidem</h1>
+    <p>Digital Marketer & Web Developer</p>
+  </header>
+
+  <!-- About -->
+  <div class="w3-content w3-justify w3-padding-64" id="about">
+    <h2 class="section-title">Career Objective</h2>
+    <p>
+      Passionate digital marketer focused on building impactful brand experiences through social media and search engine strategies. Skilled in campaign setup, audience targeting, content planning, and performance analysis. Eager to contribute to a results-driven team while growing in paid media and digital engagement.
+    </p>
+
+    <h3 class="section-title">Skills</h3>
+    <p>HTML, CSS, Basics in JavaScript</p>
+    <div class="skills-bar"><div style="width:75%">75%</div></div>
+    <p>Social Media Marketing</p>
+    <div class="skills-bar"><div style="width:90%">90%</div></div>
+    <p>Campaign Management & Optimization</p>
+    <div class="skills-bar"><div style="width:85%">85%</div></div>
+    <p>Content Creation & Scheduling</p>
+    <div class="skills-bar"><div style="width:80%">80%</div></div>
+
+    <h3 class="section-title">Education</h3>
+    <p><b>BA in Political Science</b>, Acharya Nagarjuna University<br>July 2019 – July 2022 (75%)</p>
+
+    <h3 class="section-title">Experience</h3>
+    <p><b>DadtheAd Digital Marketing Agency – WordPress Developer</b><br><i>May 2025 – June 2025, Guntur</i></p>
+    <ul>
+      <li>Developed and customized WordPress websites using themes and plugins.</li>
+      <li>Managed content updates and troubleshooting via WordPress admin and Elementor.</li>
+      <li>Performed on-page SEO to improve visibility.</li>
+      <li>Ensured mobile responsiveness and cross-browser compatibility.</li>
+    </ul>
+    <p><b>DadtheAd Digital Marketing Agency – Social Media Marketing Executive</b><br><i>Dec 2024 – April 2025, Guntur</i></p>
+    <ul>
+      <li>Scheduled posts and ran targeted ad campaigns on Instagram and Facebook.</li>
+      <li>Researched trends, hashtags, and competitors to improve reach.</li>
+      <li>Monitored insights and optimized performance.</li>
+      <li>Managed audience engagement and interactions.</li>
+    </ul>
+
+    <h3 class="section-title">Projects</h3>
+    <div style="margin-bottom:40px;">
+      <p><b>Radhika Cosmetic Gynecology Website</b></p>
+      <ul>
+        <li>Developed a responsive WordPress site using Elementor.</li>
+        <li>SEO-optimized service pages with integrated contact forms.</li>
+        <li>Installed plugins for performance, speed, and security.</li>
+      </ul>
+      <div class="project-image">
+        <a href="https://radhikacosmeticgynecology.com/" target="_blank">
+          <img src="radhika.png" alt="Radhika Cosmetic Gynecology Center">
+        </a>
+      </div>
+    </div>
+
+    <div style="margin-bottom:40px;">
+      <p><b>Radhika Cosmetic Gynecology Social Media</b></p>
+      <ul>
+        <li>Created and scheduled posts, reels, and stories across Instagram and Facebook.</li>
+        <li>Ran targeted ad campaigns for awareness and appointment bookings.</li>
+        <li>Monitored insights and improved audience engagement.</li>
+      </ul>
+    </div>
+
+    <a href="devres.pdf" class="w3-button w3-padding-large w3-margin-top">
+      <i class="fa fa-download"></i> Download Resume
+    </a>
+  </div>
+
+  <!-- Contact -->
+  <div class="w3-padding-64 w3-content" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Guntur, Andhra Pradesh, India</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> +91 83090 63079</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i> maheshpanidem69@gmail.com</p>
+    </div>
+    <form action="https://formsubmit.co/maheshpanidem69@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="New message from portfolio site!">
+  <input type="hidden" name="_captcha" value="false">
+
+  <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="name"></p>
+  <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="email"></p>
+  <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="message"></p>
+  
+  <p><button class="w3-button w3-padding-large" type="submit">
+    <i class="fa fa-paper-plane"></i> SEND MESSAGE
+  </button></p>
+</form>
+   
+  </div>
+
+  <footer class="w3-content w3-padding-64 w3-xxlarge w3-center">
+  <a href="https://www.facebook.com/myprofile" target="_blank">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  </a>
+  <a href="https://www.instagram.com/myprofile" target="_blank">
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/myprofile" target="_blank">
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </a>
+</footer>
+
+</div>
+</body>
+</html>
