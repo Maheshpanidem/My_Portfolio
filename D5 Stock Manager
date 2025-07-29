@@ -1,0 +1,79 @@
+import React, { useState } from "react";
+
+export default function D5StockManager() {
+  const [stockIn, setStockIn] = useState({ category: '', item: '', quantity: '', supplier: '', invoice: '', rate: '', date: '' });
+  const [stockOut, setStockOut] = useState({ item: '', quantity: '', site: '', method: '', date: '', issuedBy: '' });
+  const [newStock, setNewStock] = useState({ category: '', item: '', unit: '', price: '' });
+
+  const handleInputChange = (e, form, setForm) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSubmit = (e, form, type) => {
+    e.preventDefault();
+    console.log(`${type} Submitted`, form);
+  };
+
+  return (
+    <div className="p-6 font-sans text-white bg-[#1e1e2f] min-h-screen">
+      {/* Middle Header */}
+      <header className="flex justify-between items-center bg-[#29293d] p-4 rounded-xl shadow mb-6">
+        <h1 className="text-2xl font-bold">D5 Build Mart</h1>
+        <div className="flex gap-4 items-center">
+          <span>{new Date().toLocaleString()}</span>
+          <span className="bg-green-600 px-3 py-1 rounded-full text-sm">Admin</span>
+          <button className="bg-red-500 px-4 py-1 rounded-lg hover:bg-red-600">Logout</button>
+        </div>
+      </header>
+
+      {/* Hero Section - Stock In/Out */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        {/* Stock In */}
+        <form onSubmit={(e) => handleSubmit(e, stockIn, 'Stock In')} className="bg-[#2f2f46] p-5 rounded-xl">
+          <h2 className="text-xl font-semibold mb-4">Stock In</h2>
+          <div className="grid gap-3">
+            <input type="text" name="category" placeholder="Category" value={stockIn.category} onChange={(e) => handleInputChange(e, stockIn, setStockIn)} className="p-2 rounded bg-[#3e3e5a]" />
+            <input type="text" name="item" placeholder="Item Name" value={stockIn.item} onChange={(e) => handleInputChange(e, stockIn, setStockIn)} className="p-2 rounded bg-[#3e3e5a]" />
+            <input type="number" name="quantity" placeholder="Quantity" value={stockIn.quantity} onChange={(e) => handleInputChange(e, stockIn, setStockIn)} className="p-2 rounded bg-[#3e3e5a]" />
+            <input type="text" name="supplier" placeholder="Supplier Name" value={stockIn.supplier} onChange={(e) => handleInputChange(e, stockIn, setStockIn)} className="p-2 rounded bg-[#3e3e5a]" />
+            <input type="text" name="invoice" placeholder="Invoice Number" value={stockIn.invoice} onChange={(e) => handleInputChange(e, stockIn, setStockIn)} className="p-2 rounded bg-[#3e3e5a]" />
+            <input type="number" name="rate" placeholder="Rate per Unit" value={stockIn.rate} onChange={(e) => handleInputChange(e, stockIn, setStockIn)} className="p-2 rounded bg-[#3e3e5a]" />
+            <input type="date" name="date" value={stockIn.date} onChange={(e) => handleInputChange(e, stockIn, setStockIn)} className="p-2 rounded bg-[#3e3e5a]" />
+          </div>
+          <button className="mt-4 bg-green-600 px-4 py-2 rounded hover:bg-green-700">Add Stock</button>
+        </form>
+
+        {/* Stock Out */}
+        <form onSubmit={(e) => handleSubmit(e, stockOut, 'Stock Out')} className="bg-[#2f2f46] p-5 rounded-xl">
+          <h2 className="text-xl font-semibold mb-4">Stock Out</h2>
+          <div className="grid gap-3">
+            <input type="text" name="item" placeholder="Select Item" value={stockOut.item} onChange={(e) => handleInputChange(e, stockOut, setStockOut)} className="p-2 rounded bg-[#3e3e5a]" />
+            <input type="number" name="quantity" placeholder="Quantity Issued" value={stockOut.quantity} onChange={(e) => handleInputChange(e, stockOut, setStockOut)} className="p-2 rounded bg-[#3e3e5a]" />
+            <input type="text" name="site" placeholder="Site/Customer Name" value={stockOut.site} onChange={(e) => handleInputChange(e, stockOut, setStockOut)} className="p-2 rounded bg-[#3e3e5a]" />
+            <select name="method" value={stockOut.method} onChange={(e) => handleInputChange(e, stockOut, setStockOut)} className="p-2 rounded bg-[#3e3e5a]">
+              <option value="">Delivery Method</option>
+              <option value="pickup">Pickup</option>
+              <option value="delivery">Delivery</option>
+            </select>
+            <input type="date" name="date" value={stockOut.date} onChange={(e) => handleInputChange(e, stockOut, setStockOut)} className="p-2 rounded bg-[#3e3e5a]" />
+            <input type="text" name="issuedBy" placeholder="Issued By" value={stockOut.issuedBy} onChange={(e) => handleInputChange(e, stockOut, setStockOut)} className="p-2 rounded bg-[#3e3e5a]" />
+          </div>
+          <button className="mt-4 bg-yellow-600 px-4 py-2 rounded hover:bg-yellow-700">Submit</button>
+        </form>
+      </section>
+
+      {/* Lower Header - Enter Stock */}
+      <section className="bg-[#29293d] p-5 rounded-xl">
+        <h2 className="text-xl font-semibold mb-4">Enter New Stock</h2>
+        <div className="grid md:grid-cols-4 gap-4">
+          <input type="text" name="category" placeholder="New Category" value={newStock.category} onChange={(e) => handleInputChange(e, newStock, setNewStock)} className="p-2 rounded bg-[#3e3e5a]" />
+          <input type="text" name="item" placeholder="Item Name" value={newStock.item} onChange={(e) => handleInputChange(e, newStock, setNewStock)} className="p-2 rounded bg-[#3e3e5a]" />
+          <input type="text" name="unit" placeholder="Unit (e.g. kg, pcs)" value={newStock.unit} onChange={(e) => handleInputChange(e, newStock, setNewStock)} className="p-2 rounded bg-[#3e3e5a]" />
+          <input type="number" name="price" placeholder="Price" value={newStock.price} onChange={(e) => handleInputChange(e, newStock, setNewStock)} className="p-2 rounded bg-[#3e3e5a]" />
+        </div>
+        <button className="mt-4 bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Save & Refresh</button>
+      </section>
+    </div>
+  );
+}
